@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Church Songbook</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h2>📖 Church Songbook</h2>
+
+    <input type="text"
+        id="search"
+        placeholder="Search song number or title..."
+        onkeyup="searchSong()">
+
+    <button class="modeBtn" onclick="toggleDarkMode()">🌙</button>
+</header>
+
+<div class="container">
+
+    <!-- Song List -->
+    <div id="songList" class="song-list"></div>
+
+    <!-- Lyrics Viewer -->
+    <div class="viewer">
+        <h3 id="songTitle"></h3>
+
+        <div id="lyrics"></div>
+
+        <div class="controls">
+            <button onclick="prevSong()">⬅</button>
+            <button onclick="autoScroll()">▶</button>
+            <button onclick="changeFont(2)">A+</button>
+            <button onclick="changeFont(-2)">A-</button>
+            <button onclick="favoriteSong()">❤️</button>
+            <button onclick="nextSong()">➡</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
